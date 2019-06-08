@@ -1,0 +1,82 @@
+{
+  "name": "react-starter",
+  "version": "1.0.0",
+  "description": "React webapp starter",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "NODE_ENV=development node scripts/start.js",
+    "build": "NODE_ENV=production node scripts/build.js",
+    "pushcode": "git push --no-verify",
+    "deploy": "npm run build && gh-pages -d build",
+    "version": "auto-changelog -p --release-summary -l false --template changelog.template.hbs && git add CHANGELOG.md"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zerosoul/react-starter.git"
+  },
+  "keywords": [
+    "css3",
+    "border-radius",
+    "react",
+    "frontend",
+    "tool",
+    "amazing"
+  ],
+  "author": "tristan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zerosoul/react-starter/issues"
+  },
+  "homepage": "https://zerosoul.github.io/react-starter",
+  "dependencies": {
+    "body-scroll-lock": "^2.6.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-github-btn": "^1.0.5",
+    "react-page-visibility": "^4.0.0",
+    "react-particles-js": "^2.6.0",
+    "react-share": "^3.0.0",
+    "smooth-scroll-into-view-if-needed": "^1.1.23",
+    "styled-components": "^4.2.0",
+    "styled-reset": "^2.0.12"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "@commitlint/cli": "^8.0.0",
+    "@commitlint/config-conventional": "^8.0.0",
+    "auto-changelog": "^1.13.0",
+    "autodll-webpack-plugin": "^0.4.2",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^2.1.1",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.3.0",
+    "eslint-plugin-react": "^7.13.0",
+    "eslint-plugin-react-hooks": "^1.6.0",
+    "file-loader": "^4.0.0",
+    "gh-pages": "^2.0.1",
+    "happypack": "^5.0.1",
+    "html-webpack-plugin": "^3.2.0",
+    "husky": "^2.3.0",
+    "interpolate-html-plugin": "^3.0.0",
+    "lint-staged": "^8.1.7",
+    "mini-css-extract-plugin": "^0.7.0",
+    "prettier": "^1.17.1",
+    "react-dev-utils": "^9.0.1",
+    "style-loader": "^0.23.1",
+    "terser-webpack-plugin": "^1.3.0",
+    "url-loader": "^2.0.0",
+    "webpack": "^4.32.2",
+    "webpack-bundle-analyzer": "^3.3.2",
+    "webpack-cli": "^3.3.2",
+    "webpack-dev-server": "^3.4.1",
+    "webpack-manifest-plugin": "^2.0.4",
+    "webpack-merge": "^4.2.1"
+  }
+}
