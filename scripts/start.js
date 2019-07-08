@@ -31,6 +31,7 @@ const createDevServerConfig = require('../config/webpackDevServer.config');
 
 const useYarn = fs.existsSync(paths.yarnLockFile);
 const isInteractive = process.stdout.isTTY;
+const installedCheck = require('installed-check');
 
 // Warn and crash if required files are missing
 if (!checkRequiredFiles([paths.appHtml, paths.appIndexJs])) {
@@ -40,7 +41,20 @@ if (!checkRequiredFiles([paths.appHtml, paths.appIndexJs])) {
 // Tools like Cloud9 rely on this.
 const DEFAULT_PORT = parseInt(process.env.PORT, 10) || 8088;
 const HOST = process.env.HOST || '0.0.0.0';
-
+// 检查已安装的包和package.json中是否一致
+installedCheck().then(result => {
+  if (result.errors.length) {
+    let logStr = chalk.bgRed.bold(
+      'Dependency check errors: \n\n' + result.errors.join('\n') + '\n'
+    );
+    console.log(logStr);
+    let solveStr = chalk.bgGreenBright.bold(
+      'try running: "npm install" to solve this error' + '\n'
+    );
+    console.log(solveStr);
+    process.exit(1);
+  }
+});
 if (process.env.HOST) {
   console.log(
     chalk.cyan(

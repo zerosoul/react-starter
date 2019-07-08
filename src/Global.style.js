@@ -24,6 +24,7 @@ const GlobalStyle = createGlobalStyle`
     position: relative;
   }
   #root{
+    min-height:100vh;
     background-image:linear-gradient(135deg, rgb(96, 108, 136) 0%, rgb(63, 76, 107) 100%);
   }
 
