@@ -91,16 +91,20 @@ module.exports = {
               minifyURLs: true
             }
     }),
-    new AutoDllPlugin({
-      context: path.join(__dirname, '..'),
-      inject: true, //自动在index.html引入dll
-      debug: true,
-      filename: '[name]_[hash].dll.js',
-      path: './dll',
-      entry: {
-        react: ['react', 'react-dom', 'styled-components']
-      }
-    }),
+    new AutoDllPlugin(
+      process.env.NODE_ENV === 'development'
+        ? {}
+        : {
+            context: path.join(__dirname, '..'),
+            inject: true, //自动在index.html引入dll
+            debug: true,
+            filename: '[name]_[hash].dll.js',
+            path: './dll',
+            entry: {
+              react: ['react', 'react-dom', 'styled-components']
+            }
+          }
+    ),
     new InterpolateHtmlPlugin(env.raw)
   ],
   // node中用到，但是浏览器不用到的类库，给出空对象模拟
