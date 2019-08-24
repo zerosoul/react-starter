@@ -42,7 +42,7 @@ if (!checkRequiredFiles([paths.appHtml, paths.appIndexJs])) {
 const DEFAULT_PORT = parseInt(process.env.PORT, 10) || 8088;
 const HOST = process.env.HOST || '0.0.0.0';
 // 检查已安装的包和package.json中是否一致
-installedCheck().then(result => {
+installedCheck({ versionCheck: true }).then(result => {
   if (result.errors.length) {
     let logStr = chalk.bgRed.bold(
       'Dependency check errors: \n\n' + result.errors.join('\n') + '\n'
