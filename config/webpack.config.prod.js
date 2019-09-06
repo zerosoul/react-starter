@@ -79,8 +79,6 @@ module.exports = merge(commonConfig, {
   optimization: {
     minimizer: [
       new TerserPlugin({
-        parallel: true,
-        cache: true,
         terserOptions: {
           mangle: true,
           ecma: 8,
