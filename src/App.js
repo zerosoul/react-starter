@@ -1,18 +1,17 @@
-import React, { lazy, Suspense } from 'react';
-import Loading from './components/Loading';
-const Header = lazy(() => import('./components/Header'));
-const Footer = lazy(() => import('./components/Footer'));
-import styled from 'styled-components';
-const StyledBody = styled.section`
-  height: 60vh;
-`;
-const App = () => {
+import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import { Route, Switch } from 'react-router';
+import Home from './pages/Home';
+function App() {
   return (
-    <Suspense fallback={<Loading />}>
-      <Header />
-      <StyledBody>body</StyledBody>
-      <Footer />
-    </Suspense>
+    <BrowserRouter>
+      <Switch>
+        <Route path="/">
+          <Home />
+        </Route>
+      </Switch>
+    </BrowserRouter>
   );
-};
+}
+
 export default App;
