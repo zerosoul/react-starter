@@ -49,6 +49,7 @@
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^2.5.1",
     "gh-pages": "^2.2.0",
+    "husky": "^4.2.3",
     "prettier": "^2.0.1"
   },
   "repository": {
