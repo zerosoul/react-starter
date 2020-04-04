@@ -28,6 +28,7 @@
 ## 约定
 
 - `components`/`containers`/`pages`分别对应：组件，容器和页面
+- 包管理工具推荐使用`yarn`
 
 ## 推荐安装的 VSCode 插件
 
