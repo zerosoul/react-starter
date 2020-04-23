@@ -41,7 +41,7 @@
 
 - [中国色](https://colors.ichuantong.cn/)
 - [Github 仓库标星统计](https://stars.yangerxiao.com/?repo=https://github.com/zerosoul/chinese-colors)
-- [土味情话生成器](https://works.yangerxiao.com/honeyed-words-generator/)
+- [土味情话](https://works.yangerxiao.com/honeyed-words-generator/)
 - [静心呼吸，在线调节](https://works.yangerxiao.com/breathe-relaxer/)
 - [超强密码生成器](https://works.yangerxiao.com/strong-password-generator/)
 
