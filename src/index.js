@@ -8,13 +8,13 @@ import * as serviceWorker from './serviceWorker';
 if (module && module.hot) {
   module.hot.accept();
 }
-const Main = (
+ReactDOM.render(
   <>
     <GlobalStyle />
     <App />
-  </>
+  </>,
+  document.getElementById('root')
 );
-ReactDOM.render(<Main />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

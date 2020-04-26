@@ -16,15 +16,17 @@ const GlobalStyle = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
     font-family:"Fangzheng ZY", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei";
   }
-  body{
+  html,body{
     -webkit-overflow-scrolling: touch;
     overflow:scroll;
     margin:0 auto;
-    min-height:100vh;
     position: relative;
+    min-height: 100%;
+    min-height: -moz-available;
+    min-height: -webkit-fill-available;
+    min-height: fill-available;
   }
   #root{
-    min-height:100vh;
     background-image:linear-gradient(135deg, rgb(96, 108, 136) 0%, rgb(63, 76, 107) 100%);
   }
 
