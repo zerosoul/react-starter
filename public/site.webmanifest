@@ -1,7 +1,7 @@
 {
   "short_name": "React Starter",
   "name": "React Starter",
-  "start_url": "./index.html",
+  "start_url": ".",
   "icons": [
     {
       "src": "apple-touch-icon.png",
